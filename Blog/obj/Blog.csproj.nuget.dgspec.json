@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj": {}
+    "C:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj": {}
   },
   "projects": {
-    "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj": {
+    "C:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj",
+        "projectUniqueName": "C:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj",
         "projectName": "Blog",
-        "projectPath": "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj",
+        "projectPath": "C:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj",
         "packagesPath": "C:\\Users\\wbahi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\wbahi\\projetos\\blog\\Blog\\obj\\",
+        "outputPath": "C:\\Users\\wbahi\\projetos\\blog\\Blog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wbahi\\AppData\\Roaming\\NuGet\\NuGet.Config"
