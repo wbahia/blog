@@ -20,6 +20,4 @@ namespace Blog.Models.Domain
 
         public ICollection<Tag> Tags{ get; set; }
     }
-
-    
 }
