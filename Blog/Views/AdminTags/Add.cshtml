@@ -1,9 +1,26 @@
+@model Blog.Models.ViewModels.AddTagRequest
 @{
     ViewData["Title"] = "Add";
 }
 
 <div class="bg-secondary bg-opacity-10 py-2">
     <div class="container">
-        <h1>Adicionar Nova Tag - Admin</h1>
+        <h1>[ADMIN] Adicionar Nova Tag</h1>
     </div>
+</div>
+
+<div class="container py-5">
+    <form action="" method="post">
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" asp-for="Name">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nome de Exibição</label>
+            <input type="text" class="form-control" id="displayName" asp-for="DisplayName">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark" id="displayName">Salvar</button>
+        </div>
+    </form>
 </div>
