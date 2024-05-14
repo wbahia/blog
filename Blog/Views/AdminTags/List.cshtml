@@ -34,10 +34,10 @@
                             @tag.DisplayName
                         </td>
                         <td>
-                            <a asp-area="" asp-controller="AdminTags" asp-action="Edit" asp-route-id="@tag.Id">Editar</a>
+                            <a class="btn btn-dark" asp-area="" asp-controller="AdminTags" asp-action="Edit" asp-route-id="@tag.Id">Editar</a>
                         </td>
                         <td>
-                            <a asp-area="" asp-controller="AdminTags" asp-action="Delete">Excluir</a>
+                            <a class="btn btn-danger ms-2" asp-area="" asp-controller="AdminTags" asp-action="Delete" asp-route-id="@tag.Id">Excluir</a>
                         </td>
                     </tr>
                 }

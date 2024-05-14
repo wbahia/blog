@@ -82,6 +82,22 @@ namespace Blog.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult Delete(Guid id)
+        {
+            var tag = _blogDbContext.Tags.FirstOrDefault(x => x.Id == id);
+            if(tag != null){
+                _blogDbContext.Tags.Remove(tag);
+                _blogDbContext.SaveChanges();
+                //show sucess
+                return RedirectToAction("List");
+            }
+
+            //show error
+            return RedirectToAction("List");
+
+        }
+
 
     }
 }
