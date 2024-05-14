@@ -1,0 +1,49 @@
+@model List<Blog.Models.Domain.Tag>
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>[ADMIN] Listagem de Tags</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    @if(Model != null && Model.Any()){
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Nome de Exibição</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tag in Model){
+                    <tr>
+                        <td>
+                            @tag.Id
+                        </td>
+                        <td>
+                            @tag.Name
+                        </td>
+                        <td>
+                            @tag.DisplayName
+                        </td>
+                        <td>
+                            <a asp-area="" asp-controller="AdminTags" asp-action="Edit" asp-route-id="@tag.Id">Editar</a>
+                        </td>
+                        <td>
+                            <a asp-area="" asp-controller="AdminTags" asp-action="Delete">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }else{
+        <p>Nenhuma Tag encontrada!</p>
+    }
+</div>
