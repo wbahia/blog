@@ -1,19 +1,18 @@
-using Blog.Data;
 using Blog.Models.Domain;
 using Blog.Models.ViewModels;
+using Blog.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace Blog.Controllers
 {
     public class AdminTagsController : Controller
     {
-        private BlogDbContext _blogDbContext;
 
-        public AdminTagsController(BlogDbContext blogDbContext)
+        public ITagRepository TagRepository { get; }
+
+        public AdminTagsController(ITagRepository tagRepository) 
         {
-            _blogDbContext = blogDbContext;
+            this.TagRepository = tagRepository;
         }
 
         [HttpGet]
@@ -32,8 +31,7 @@ namespace Blog.Controllers
                 DisplayName = addTagRequest.DisplayName
             };
 
-            await _blogDbContext.Tags.AddAsync(tag);
-            await _blogDbContext.SaveChangesAsync();
+            await this.TagRepository.AddAsync(tag);
 
             return RedirectToAction("List");
         }
@@ -41,14 +39,14 @@ namespace Blog.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            var tags = await _blogDbContext.Tags.ToListAsync();
+            var tags =  await this.TagRepository.GetAllAsync();
             return View(tags);
         }
 
         [HttpGet]
         public async Task<IActionResult> Edit(Guid id)
         {
-            var tag = await _blogDbContext.Tags.FirstOrDefaultAsync(x => x.Id == id);
+            var tag = await this.TagRepository.GetAsync(id);
             if(tag != null){
                 var editTagRequest = new EditTagRequest
                 {
@@ -71,16 +69,15 @@ namespace Blog.Controllers
                 Id = editTagRequest.Id
             };
             
-            var existingTag = await _blogDbContext.Tags.FindAsync(tag.Id);
+            var updatedTag = await this.TagRepository.UpdateAsync(tag);
 
-            if(existingTag != null){
-                existingTag.Name = tag.Name;
-                existingTag.DisplayName = tag.DisplayName;
-                
-                await _blogDbContext.SaveChangesAsync();
-                return RedirectToAction("Edit", new { id = editTagRequest.Id });
+            if(updatedTag != null){
+                //show ok
+
             }
-
+            else{
+                //show error
+            }
             return RedirectToAction("Edit", new { id = editTagRequest.Id });
 
         }
@@ -88,15 +85,18 @@ namespace Blog.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var tag = await _blogDbContext.Tags.FirstOrDefaultAsync(x => x.Id == id);
-            if(tag != null){
-                _blogDbContext.Tags.Remove(tag);
-                await _blogDbContext.SaveChangesAsync();
-                //show sucess
+            var deletedTag = await this.TagRepository.DeleteAsync(id);
+
+            if(deletedTag != null){
+                //show ok
                 return RedirectToAction("List");
+
+            }
+            else{
+                //show error
             }
 
-            //show error
+            
             return RedirectToAction("List");
 
         }
