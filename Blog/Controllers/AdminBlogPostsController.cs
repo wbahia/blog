@@ -61,12 +61,12 @@ namespace Blog.Controllers
             return RedirectToAction("Add");
         }
 
-        // [HttpGet]
-        // public async Task<IActionResult> List()
-        // {
-        //     var tags =  await this.TagRepository.GetAllAsync();
-        //     return View(tags);
-        // }
+        [HttpGet]
+        public async Task<IActionResult> List()
+        {
+            var posts =  await this.BlogPostRepository.GetAllAsync();
+            return View(posts);
+        }
 
         // [HttpGet]
         // public async Task<IActionResult> Edit(Guid id)
