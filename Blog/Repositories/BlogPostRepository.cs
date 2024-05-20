@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Blog.Data;
 using Blog.Models.Domain;
 using Microsoft.EntityFrameworkCore;
@@ -24,9 +20,17 @@ namespace Blog.Repositories
             return blogPost;
         }
 
-        public Task<BlogPost?> DeleteAsync(Guid id)
+        public async Task<BlogPost?> DeleteAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var post = await this.BlogDbContext.BlogPosts.FirstOrDefaultAsync(x => x.Id == id);
+            if(post != null){
+                this.BlogDbContext.BlogPosts.Remove(post);
+                await this.BlogDbContext.SaveChangesAsync();
+
+                return post;
+            }
+
+            return null;
         }
 
         public async Task<IEnumerable<BlogPost>> GetAllAsync()

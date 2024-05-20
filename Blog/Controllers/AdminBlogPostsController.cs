@@ -136,24 +136,23 @@ namespace Blog.Controllers
 
         }
 
-        // [HttpGet]
-        // public async Task<IActionResult> Delete(Guid id)
-        // {
-        //     var deletedTag = await this.TagRepository.DeleteAsync(id);
+        [HttpGet]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var deletedPost = await this.BlogPostRepository.DeleteAsync(id);
 
-        //     if(deletedTag != null){
-        //         //show ok
-        //         return RedirectToAction("List");
+            if(deletedPost != null){
+                //show ok
+                return RedirectToAction("List");
 
-        //     }
-        //     else{
-        //         //show error
-        //     }
+            }
+            else{
+                //show error
+            }
 
-            
-        //     return RedirectToAction("List");
+            return RedirectToAction("List");
 
-        // }
+        }
 
     }
 }
