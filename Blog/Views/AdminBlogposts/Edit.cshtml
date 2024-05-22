@@ -79,7 +79,9 @@
 
 @section Scripts{
     <script>
-        var editor = new FroalaEditor('#content');
+        var editor = new FroalaEditor('#content', {
+            imageUploadURL: '/api/images'
+        });
 
         const featuredImageUpload = document.getElementById("featuredImageUpload");
         async function uploadFeatureImage(e){
