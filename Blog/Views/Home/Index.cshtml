@@ -1,8 +1,56 @@
-﻿@{
+﻿@model List<Blog.Models.Domain.BlogPost>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container colxxl-8 px-4 py-5">
+    <div class="row align-items-center g-5 py-5">
+        <div class="col-12 col-lg-6">
+            <h1 class="display-5 fw-bold lh-1mb-3">
+                Bloggynho - O Blog do Dev
+            </h1>
+            <p class="lead">
+                Blogynho é a casa de conteúdo sobre desenvolvimento web. Vamos falar sobre uma variedade enorme de conteúdo tipo 
+                HTML, CSS, Javascript, ASP.NET, Node.js <3
+            </p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <img src="https://images.pexels.com/photos/4050423/pexels-photo-4050423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Bloggynho"
+                class="d-block ms-lg-auto rounded float-left" width="300">
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            @if(Model != null && Model.Any()){
+                foreach (var item in Model){
+                    <div class="mb-5 bg-light box-shadow p-5">
+                        <img src="@item.FeaturedImageUrl" alt="@item.Heading" class="mb-2 d-block img-fluid">
+                    </div>
+
+                    <h2 class="mb-4">@item.Heading</h2>
+                    <p class="mb-4"> 
+                        Autor: @item.Author<br>
+                        Data de Publicação: @item.PublishedDate.ToShortDateString()
+                    </p>
+                    <p class="mb-4"> 
+                        @item.ShortDescription
+                    </p>
+
+                    <p class="mb-4"> 
+                        @foreach (var tag in item.Tags){
+                            <span class="badge bg-secondary me-1">@tag.Name</span>
+                        }
+                    </p>
+
+                    <a class="btn btn-dark mb-5" href="">Leia mais...</a>
+                }
+            }
+        </div>
+    </div>
 </div>
