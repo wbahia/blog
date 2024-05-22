@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Blog
 build_property.RootNamespace = Blog
-build_property.ProjectDir = c:\Users\wbahi\projetos\blog\Blog\
+build_property.ProjectDir = C:\Users\wbahi\projetos\blog\Blog\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\wbahi\projetos\blog\Blog
+build_property.MSBuildProjectDirectory = C:\Users\wbahi\projetos\blog\Blog
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/AdminBlogposts/Add.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/AdminBlogposts/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5CbG9ncG9zdHNcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/AdminBlogposts/Edit.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/AdminBlogposts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5CbG9ncG9zdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/AdminBlogposts/List.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/AdminBlogposts/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5CbG9ncG9zdHNcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/AdminTags/Add.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/AdminTags/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UYWdzXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/AdminTags/Edit.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/AdminTags/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UYWdzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/AdminTags/List.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/AdminTags/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UYWdzXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/Home/Index.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/Home/Privacy.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/Shared/Error.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/_ViewImports.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/_ViewStart.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/wbahi/projetos/blog/Blog/Views/Shared/_Layout.cshtml]
+[C:/Users/wbahi/projetos/blog/Blog/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9b4f8crvh3
