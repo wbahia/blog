@@ -1,4 +1,4 @@
-﻿@model List<Blog.Models.Domain.BlogPost>
+﻿@model Blog.Models.ViewModels.HomeViewModel
 
 @{
     ViewData["Title"] = "Home Page";
@@ -26,9 +26,23 @@
 
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-6 d-flex mb-3">
+            @if(Model != null && Model.Tags.Any()){
+                @foreach (var tag in Model.Tags){
+                    <span class="badge bg-secondary me-1">
+                        @tag.Name
+                    </span>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
         <div class="col-6">
-            @if(Model != null && Model.Any()){
-                foreach (var item in Model){
+            @if(Model != null && Model.BlogPosts.Any()){
+                foreach (var item in Model.BlogPosts){
                     <div class="mb-5 bg-light box-shadow p-5">
                         <img src="@item.FeaturedImageUrl" alt="@item.Heading" class="mb-2 d-block img-fluid">
 
