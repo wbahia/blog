@@ -47,7 +47,13 @@
                         }
                     </p>
 
-                    <a class="btn btn-dark mb-5" href="">Leia mais...</a>
+                    <a class="btn btn-dark mb-5" 
+                        asp-area=""
+                        asp-controller="Blogs"
+                        asp-action="Index"
+                        asp-route-urlHandle="@item.Slug">
+                        Leia mais...
+                    </a>
                     </div>
                 }
             }

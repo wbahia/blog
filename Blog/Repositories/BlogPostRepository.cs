@@ -43,6 +43,11 @@ namespace Blog.Repositories
             return await this.BlogDbContext.BlogPosts.Include(x => x.Tags).FirstOrDefaultAsync(p => p.Id == id);
         }
 
+        public async Task<BlogPost?> GetAsync(string slug)
+        {
+            return await this.BlogDbContext.BlogPosts.Include(x => x.Tags).FirstOrDefaultAsync(p => p.Slug == slug);
+        }
+
         public async Task<BlogPost?> UpdateAsync(BlogPost blogPost)
         {
             var existingBlogPost = await this.BlogDbContext.BlogPosts.Include(t => t.Tags).FirstOrDefaultAsync(x => x.Id == blogPost.Id);
