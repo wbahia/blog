@@ -1,10 +1,12 @@
 using Blog.Models.Domain;
 using Blog.Models.ViewModels;
 using Blog.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminTagsController : Controller
     {
 
