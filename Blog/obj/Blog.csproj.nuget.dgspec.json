@@ -1,28 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj": {}
+    "C:\\Users\\wbahi\\Projetos\\blog\\Blog\\Blog.csproj": {}
   },
   "projects": {
-    "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj": {
+    "C:\\Users\\wbahi\\Projetos\\blog\\Blog\\Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj",
+        "projectUniqueName": "C:\\Users\\wbahi\\Projetos\\blog\\Blog\\Blog.csproj",
         "projectName": "Blog",
-        "projectPath": "c:\\Users\\wbahi\\projetos\\blog\\Blog\\Blog.csproj",
+        "projectPath": "C:\\Users\\wbahi\\Projetos\\blog\\Blog\\Blog.csproj",
         "packagesPath": "C:\\Users\\wbahi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\wbahi\\projetos\\blog\\Blog\\obj\\",
+        "outputPath": "C:\\Users\\wbahi\\Projetos\\blog\\Blog\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\wbahi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\wbahi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Users\\wbahi\\packages": {},
-          "C:\\Users\\wbahi\\packages": {},
-          "c:\\users\\wbahi\\projetos\\packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -83,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
