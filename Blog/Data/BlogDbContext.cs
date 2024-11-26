@@ -13,10 +13,8 @@ namespace Blog.Data
         public DbSet<BlogPost> BlogPosts { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<BlogPostLike> BlogPostLike { get; set; }
+        public DbSet<BlogPostComment> BlogPostComment { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<BlogPost>().HasMany(t => t.Tags).WithMany(t => t.BlogPosts);
-        //}
+
     }
 }

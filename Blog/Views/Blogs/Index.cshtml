@@ -11,18 +11,19 @@
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12 col-lg-6">
-            @if(Model != null){
+            @if (Model != null)
+            {
                 <h1 class="mb-3">@Model.Heading</h1>
 
                 <div class="d-flex justify-content-between mb-3">
                     <span class="text-secondary">@Model.Author</span>
                     <span class="text-secondary">@Model.PublishedDate.ToShortDateString()</span>
                 </div>
-                
+
                 <div class="mb-3">
-                    @if(signInManager.IsSignedIn(User))
+                    @if (signInManager.IsSignedIn(User))
                     {
-                       if(Model.Liked)
+                        if (Model.Liked)
                         {
                             <a style="cursor:pointer;">
                                 <i class="bi bi-hand-thumbs-up-fill"></i>
@@ -39,7 +40,8 @@
                 </div>
 
                 <div class="mb-3 d-flex">
-                    @foreach (var tag in Model.Tags){
+                    @foreach (var tag in Model.Tags)
+                    {
                         <span class="badge bg-secondary me-1">@tag.Name</span>
                     }
                 </div>
@@ -50,7 +52,49 @@
                     @Html.Raw(Model.Content)
                 </div>
 
-            }else{
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Comentários</h5>
+                        @if (signInManager.IsSignedIn(User))
+                        {
+                            <form method="post">
+                                <div class="mb-3">
+                                    <label class="form-label">Descrição</label>
+                                    <input type="text" class="form-control" asp-for="CommentDescription" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="hidden" asp-for="Id" />
+                                    <input type="hidden" asp-for="Slug" />
+                                    <button type="submit" class=" btn btn-dark">Salvar</button>
+                                </div>
+                            </form>
+                        }
+                    </div>
+
+                    <div class="card-body">
+                        @if (Model.Comments != null && Model.Comments.Any())
+                        {
+                            @foreach (var item in Model.Comments)
+                            {
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div>
+                                            @item.Description
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-secondary">@item.UserName</span>
+                                            <span class="text-secondary">@item.DateAdded.ToShortDateString()</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+            }
+            else
+            {
                 <p>O post não foi encontrado!!!</p>
             }
 
@@ -58,7 +102,7 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <script>
         const btn = document.getElementById('btnLike');
         const spn = document.getElementById('spnTotalLikes');
@@ -80,9 +124,9 @@
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept':'*/*'
+                    'Accept': '*/*'
                 },
-                body:JSON.stringify({
+                body: JSON.stringify({
                     BlogPostId: '@Model.Id',
                     UserId: '@userManager.GetUserId(User)'
                 })
